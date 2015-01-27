@@ -14,6 +14,17 @@ describe("Ejs parser", function () {
 			done();
 		}).catch(done);
 	});
+
+	it("Extracts nested variables from ejs generated code", function (done) {
+		var filename = __dirname + "/fixtures/testTemplateWithNestedVar.src.html";
+		var template = fs.readFileSync(filename, {encoding: "UTF-8"});
+		var code = ejs.compile(template, {filename: filename, client: true});
+		parser.getEjsRequiredVars(code.toString()).then(function (variables) {
+			expect(variables).to.have.length(3);
+			expect(variables).to.contain("test", "heading", "nested", "nested.variable");
+			done();
+		}).catch(done);
+	});
 });
 
 //
