@@ -9,11 +9,11 @@
   "author": "Graham Coombe <graham.coombe@pulseenergy.com> (http://pulseenergy.com/)",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^2.9.1",
+    "bluebird": "^3.5.0",
     "ejs": "^2.2.3",
-    "escope": "^2.0.3",
-    "esprima": "^1.2.3",
-    "estraverse": "^1.9.1",
+    "escope": "^3.6.0",
+    "esprima": "^4.0.0",
+    "estraverse": "^4.2.0",
     "underscore": "^1.7.0"
   }
 }
